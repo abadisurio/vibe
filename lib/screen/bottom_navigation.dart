@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:vibe/screen/classroom.dart';
+import 'package:vibe/screen/club_activity.dart';
+import 'package:vibe/screen/home.dart';
+import 'package:vibe/screen/profile.dart';
+import 'package:vibe/screen/quick_action.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -13,26 +18,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    Home(),
+    ClassRoom(),
+    QuickAction(),
+    ClubActivity(),
+    Profile()
   ];
 
   void _onItemTapped(int index) {
