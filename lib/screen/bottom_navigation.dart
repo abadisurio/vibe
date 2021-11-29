@@ -55,31 +55,33 @@ class _BottomNavigationState extends State<BottomNavigation> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 12,
         type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: 'HOME',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.menu_book),
-            label: 'Class',
+            label: 'CLASS',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.check_box_outline_blank),
-            label: '',
+            label: 'SCAN',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.groups_outlined),
-            label: 'Club',
+            label: 'CLUBS',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
-            label: 'Profile',
+            label: 'PROFILE',
           ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: const Color(0xff073FCF),
+        selectedFontSize: 12,
         onTap: _onItemTapped,
       ),
       floatingActionButton: Container(
@@ -87,6 +89,17 @@ class _BottomNavigationState extends State<BottomNavigation> {
         height: 100,
         padding: const EdgeInsets.only(top: 40.0),
         child: FloatingActionButton(
+          backgroundColor: const Color(0xffFAB530),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: const [
+              Icon(Icons.qr_code_scanner),
+              Text(
+                "SCAN",
+                style: TextStyle(color: Colors.white, fontSize: 10),
+              )
+            ],
+          ),
           onPressed: () {},
         ),
       ),
