@@ -1,13 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:vibe/screen/voting.dart';
 
 class HomeActivity extends StatelessWidget {
   HomeActivity({Key? key}) : super(key: key);
 
   final List items = [
-    ["My School", Icons.school],
-    ["Trivia/Quiz", Icons.quiz_outlined],
-    ["Voting", Icons.how_to_vote],
-    ["Catalog", Icons.shopping_basket_outlined],
+    ["My School", Icons.school, 'voting'],
+    ["Trivia/Quiz", Icons.quiz_outlined, 'voting'],
+    ["Voting", Icons.how_to_vote, 'voting'],
+    ["Catalog", Icons.shopping_basket_outlined, 'voting'],
   ];
 
   // static ButtonStyle actionButton(BuildContext context) {
@@ -33,7 +35,9 @@ class HomeActivity extends StatelessWidget {
             flex: 1,
             child: InkWell(
               customBorder: const CircleBorder(),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, 'voting');
+              },
               child: Column(
                 children: [
                   Padding(

@@ -87,8 +87,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
             ],
           ),
           onPressed: () {
-            Navigator.push(context,
-                CupertinoPageRoute(builder: (context) => const QuickAction()));
+            Navigator.pushNamed(context, 'quick_action');
           },
         ),
       ),

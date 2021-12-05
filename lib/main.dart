@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vibe/screen/bottom_navigation.dart';
+import 'package:vibe/screen/quick_action.dart';
+import 'package:vibe/screen/voting.dart';
 
 void main() {
   runApp(const MyApp());
@@ -49,6 +52,19 @@ class MyApp extends StatelessWidget {
             //     color: Color(0xff868686)),
             button: TextStyle(fontWeight: FontWeight.w700)),
       ),
+      onGenerateRoute: (RouteSettings settings) {
+        switch (settings.name) {
+          case '/':
+            return CupertinoPageRoute(
+                builder: (_) => const BottomNavigation(), settings: settings);
+          case 'voting':
+            return CupertinoPageRoute(
+                builder: (_) => const Voting(), settings: settings);
+          case 'quick_action':
+            return CupertinoPageRoute(
+                builder: (_) => const QuickAction(), settings: settings);
+        }
+      },
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
