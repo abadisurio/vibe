@@ -18,7 +18,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColor,
         title: Image.asset(
           "assets/image/logo-03.png",
           height: 25,

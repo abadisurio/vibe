@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:vibe/screen/voting.dart';
 
 class HomeActivity extends StatelessWidget {
   HomeActivity({Key? key}) : super(key: key);

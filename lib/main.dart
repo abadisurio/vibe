@@ -19,6 +19,14 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
         primarySwatch: Colors.blue,
         primaryColor: const Color(0xff073FCF),
+        appBarTheme: const AppBarTheme(backgroundColor: Color(0xff073FCF)),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+              backgroundColor:
+                  MaterialStateProperty.all(const Color(0xff073FCF)),
+              shape: MaterialStateProperty.all<CircleBorder>(
+                  const CircleBorder())),
+        ),
         textTheme: const TextTheme(
             headline1: TextStyle(
                 fontWeight: FontWeight.w700,
