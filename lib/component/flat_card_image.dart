@@ -49,7 +49,7 @@ class _FlatCardImageState extends State<FlatCardImage> {
                 color: Colors.transparent,
                 child: InkWell(
                   onTap: () {
-                    print("pencet");
+                    // print("pencet");
                   },
                 ),
               ),

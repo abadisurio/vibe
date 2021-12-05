@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vibe/screen/classroom.dart';
 import 'package:vibe/screen/club_activity.dart';
@@ -85,7 +86,10 @@ class _BottomNavigationState extends State<BottomNavigation> {
               )
             ],
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context,
+                CupertinoPageRoute(builder: (context) => const QuickAction()));
+          },
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

@@ -69,7 +69,7 @@ class _CardImageState extends State<CardImage> {
                     color: Colors.transparent,
                     child: InkWell(
                       onTap: () {
-                        print("pencet");
+                        // print("pencet");
                       },
                     ),
                   ),
